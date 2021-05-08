@@ -1,27 +1,20 @@
-# HttpEffects
+# Ingresos-Egresos App (not responsive)
+  ## Pasos importates por hacer para que el programa corra correctamente:
+  - Instalar los node_modules con `npm install` 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.6.
+La funcionalidad de este ejercicio es practicar los effects de ngrx usando reqres como backend
 
-## Development server
+## Demo
+[View demo](https://github.com/ArizHernandez/Effects-app)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Preview
+  
+  ### Home
+  ![image](https://user-images.githubusercontent.com/37966712/117524966-5a8e9a80-af7d-11eb-80c9-c2f8353161c0.png)
 
-## Code scaffolding
+-------
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Mas informacion y herramientas utilizadas:
+ - **Angular** ( Framework utilizado en su version 11.2.6 )
+ - **NGRX** ( Last release )
+ - **Tailwindcss** (v2.1.2)
