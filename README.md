@@ -5,7 +5,7 @@
 La funcionalidad de este ejercicio es practicar los effects de ngrx usando reqres como backend
 
 ## Demo
-[View demo](https://arizhernandez.github.io/Effects-app/home)
+[View demo](https://arizhernandez.github.io/Effects-app)
 
 ## Preview
   
