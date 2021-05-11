@@ -1,1 +1,40 @@
-<p>user works!</p>
+<button class="bg-red-500 text-red-50 rounded p-2 mb-6 focus:outline-none hover:bg-red-400"
+        (click)="backLastPage()">
+  Back Page
+</button>
+
+<div class="container mx-auto">
+
+  <div class="loading__container" 
+       *ngIf="loading">
+      <h3 class="font-semibold text-center text-xl mb-2">Loading, please wait.</h3>
+      <div class="spinner">
+      <div class="bounce1"></div>
+      <div class="bounce2"></div>
+      <div class="bounce3"></div>
+    </div>
+  </div>
+
+  <div class="user__container flex flex-col md:flex-row md:items-center" *ngIf="!loading && !error">
+    <div class="user__image mx-center md:w-full md:max-w-xs">
+      <img class="w-full rounded"
+           [src]="user.avatar" 
+           [alt]="user.first_name">
+    </div>
+    <div class="user__description text-center md:ml-6">
+      <div class="user__info flex flex-col mb-3 md:mb-0 md:flex-row md:justify-between">
+        <h3 class="md:order-2 font-semibold"><span class="hidden md:inline">-</span>{{user.first_name}} {{user.last_name}}</h3>
+        <p><span class="md:order-1 font-semibold">Email:</span> {{user.email}}</p>
+      </div>
+      <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, minus! Sunt accusamus dolores quas labore! Maiores sequi magnam cupiditate odio nostrum, deleniti similique harum minus architecto. Repellendus quod quibusdam consectetur."</p>
+    </div>
+  </div>
+
+  <div class="error_container text-center p-2 bg-red-500 border-2 border-red-600 text-white rounded-sm"
+       *ngIf="!loading && error">
+    <h2 class="text-xl font-semibold">{{error.name}}</h2>
+    <p>Hubo un error, por favor intente de nuevo</p>
+    <p class="bg-red-400 p-2">{{error | json}}</p>
+  </div>
+  
+</div>

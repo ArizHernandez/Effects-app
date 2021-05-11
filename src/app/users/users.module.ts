@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+
 import { ListComponent } from './list/list.component';
 import { UserComponent } from './user/user.component';
 
@@ -11,7 +13,8 @@ import { UserComponent } from './user/user.component';
     UserComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   exports:[
     ListComponent,

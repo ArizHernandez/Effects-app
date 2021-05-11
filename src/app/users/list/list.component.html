@@ -1,13 +1,36 @@
 <div class="container mx-auto">
-  <div class="cards__containe grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-4">
-    <div *ngFor="let user of users" class="card p-2 mb-2 bg-gray-50 rounded">
+  <div class="loading__container" 
+       *ngIf="loading">
+    <h3 class="font-semibold text-center text-xl mb-2">Loading, please wait.</h3>
+    <div class="spinner">
+      <div class="bounce1"></div>
+      <div class="bounce2"></div>
+      <div class="bounce3"></div>
+    </div>
+  </div>
+
+  <div class="cards__containe grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-4"
+       *ngIf="!loading && !error">
+    <a class="card p-2 mb-2 bg-gray-50 rounded hover:opacity-70"
+       *ngFor="let user of users"
+       routerLink="/user/{{user.id}}">
+      
       <div class="img__container">
         <img [src]="user.avatar" [alt]="user.first_name" class="w-full rounded-sm">
       </div>
+
       <h3 class="text-md text-center font-semibold mt-2">{{user.first_name}} {{user.last_name}}</h3>
       <p class="mb-2">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus tempora, modi voluptatum maiores a nostrum dolore in vero dignissimos"</p>
       <p class="font-semibold">Email: <span class="text-sm font-normal">{{user.email}}</span></p>
       <p class="font-semibold">ID: <span class="text-sm font-normal">{{user.id}}</span></p>
-    </div>
+    </a>
   </div>
+
+  <div class="error_container text-center p-2 bg-red-500 border-2 border-red-600 text-white rounded-sm"
+       *ngIf="!loading && error">
+    <h2 class="text-xl font-semibold">{{error.name}}</h2>
+    <p>Hubo un error, por favor intente de nuevo</p>
+    <p class="bg-red-400 p-2">{{error | json}}</p>
+  </div>
+
 </div>
